@@ -1,4 +1,4 @@
-import AddToCart from './AddToCart'
+import AddToCart from './AddToCard'
 import './app.css'
 
 const Header = () => {

@@ -1,5 +1,5 @@
 header {
-  background-color: #1f3556; /* dark blue */
+  background-color: #1f3556;   /* dark blue */
   color: white;
   padding: 15px 40px;
 
@@ -16,9 +16,9 @@ header {
 
 /* Navbar List */
 nav ul {
-  list-style: none; /* remove bullets */
-  display: flex; /* make links horizontal */
-  gap: 30px; /* space between links */
+  list-style: none;      /* remove bullets */
+  display: flex;         /* make links horizontal */
+  gap: 30px;             /* space between links */
   margin: 0;
   padding: 0;
 }
@@ -36,6 +36,8 @@ nav ul li a {
 nav ul li a:hover {
   color: yellow;
 }
+
+
 
 .product-card {
   width: 350px;
@@ -81,6 +83,7 @@ nav ul li a:hover {
 
 /* Button */
 .btn {
+  width: 100%;
   padding: 12px;
   background: #1f3556;
   color: white;
@@ -89,20 +92,9 @@ nav ul li a:hover {
   cursor: pointer;
   font-size: 16px;
   transition: 0.3s;
-  margin: 10px;
 }
 
 .btn:hover {
   background: #ffcc00;
   color: black;
-}
-
-.remove-button {
-  background-color: rgb(219, 25, 25);
-  margin-left: 10px;
-
-}
-
-.remove-button:hover {
-  background-color: rgb(186, 33, 33);
 }

@@ -1,0 +1,100 @@
+header {
+  background-color: #1f3556;   /* dark blue */
+  color: white;
+  padding: 15px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navbar List */
+nav ul {
+  list-style: none;      /* remove bullets */
+  display: flex;         /* make links horizontal */
+  gap: 30px;             /* space between links */
+  margin: 0;
+  padding: 0;
+}
+
+/* Links */
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+  color: yellow;
+}
+
+
+
+.product-card {
+  width: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  background: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Image */
+.product-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Info Section */
+.product-info {
+  padding: 20px;
+}
+
+.product-info h1 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* Price */
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: green;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #1f3556;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffcc00;
+  color: black;
+}

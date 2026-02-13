@@ -1,34 +1,35 @@
-import { useDispatch } from "react-redux";
-import { addItem } from "./redux/slice";
+import { useDispatch, useSelector } from 'react-redux'
+import { addItem, removeItem } from './redux/slice';
+import { useEffect } from 'react';
+import { fetchProduct } from './redux/productSlice';
 
 const Product = () => {
 
     const dispatch = useDispatch()
 
+    useEffect(() => {
+        dispatch(fetchProduct())
+    }, [])
+
+    const productSelector = useSelector((state) => state.products.items)
+    console.log(productSelector);
+
     return (
-        <div className="product-card">
-
-            <div className="product-image">
-                <img
-                    src="https://images.unsplash.com/photo-1657223144998-e5aa4fa2db7c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdpcmVsZXNzJTIwaGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D"
-                    alt="Product Image"
-                />
-            </div>
-
-            <div className="product-info">
-                <h1>Wireless Headphones</h1>
-
-                <p className="price">$129.99</p>
-
-                <p className="description">
-                    Experience high-quality sound with these wireless headphones.
-                    Featuring noise cancellation, long-lasting battery life,
-                    and a sleek modern design for everyday use.
-                </p>
-
-                <button onClick={() => dispatch(addItem(1))} className="btn">Add to Cart</button>
-            </div>
-
+        <div className="grid">
+            {
+                productSelector.length && productSelector.map((item) => (
+                    <div className='card' key={item.id}>
+                        <img src={item.thumbnail} />
+                        <div className='content'>
+                            <div className='title'>{item.title}</div>
+                            <div className='brand'>{item.brand}</div>
+                            <div className='price'>{item.price}</div>
+                            <div className='rating'>{item.rating}</div>
+                            <button className='btn'>Add to cart</button>
+                        </div>
+                    </div>
+                ))
+            }
         </div>
     );
 };
